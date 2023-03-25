@@ -46,7 +46,7 @@ function addTimer() {
     seconds: 0,
   };
 
-  timers.value = [...timers.value, newTimer];
+  timers.value.push(newTimer);
 }
 </script>
 
