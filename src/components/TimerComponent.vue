@@ -100,7 +100,6 @@
 <script>
 import { computed, ref, toRefs } from "vue";
 
-// Props
 export default {
   props: {
     initialHours: {
@@ -208,98 +207,6 @@ export default {
     };
   },
 };
-// const props = defineProps({
-// initialHours: {
-//   type: Number,
-//   default: 0,
-// },
-// initialMinutes: {
-//   type: Number,
-//   default: 0,
-// },
-// initialSeconds: {
-//   type: Number,
-//   default: 0,
-// },
-// });
-
-// Variables
-// const {
-//   initialHours: hours,
-//   initialMinutes: minutes,
-//   initialSeconds: seconds,
-// } = toRefs(props);
-
-// const isRunning = ref(false);
-// const isFinished = ref(false);
-// const interval = ref(null);
-
-// Computed
-// const timeSet = computed(
-//   () => hours.value > 0 || minutes.value > 0 || seconds.value > 0
-// );
-// const formattedTime = computed(() => {
-//   const fHours = hours.value.toString();
-//   const fMinutes = minutes.value.toString().padStart(2, "0");
-//   const fSeconds = seconds.value.toString().padStart(2, "0");
-//   return `${fHours}:${fMinutes}:${fSeconds}`;
-// });
-
-// Methods
-// function validateHours() {
-//   if (hours.value < 0) {
-//     return (hours.value = 0);
-//   }
-// }
-// function validateMinutes() {
-//   if (minutes.value > 59) {
-//     return (minutes.value = 59);
-//   }
-//   if (minutes.value < 0) {
-//     return (minutes.value = 0);
-//   }
-// }
-// function validateSeconds() {
-//   if (seconds.value > 59) {
-//     return (seconds.value = 59);
-//   }
-//   if (seconds.value < 0) {
-//     return (seconds.value = 0);
-//   }
-// }
-// function startTimer() {
-//   if (timeSet.value && !isRunning.value) {
-//     isRunning.value = true;
-//     isFinished.value = false;
-//     interval.value = setInterval(() => {
-//       if (seconds.value > 0) {
-//         seconds.value--;
-//       } else if (minutes.value > 0) {
-//         minutes.value--;
-//         seconds.value = 59;
-//       } else if (hours.value > 0) {
-//         hours.value--;
-//         minutes.value = 59;
-//         seconds.value = 59;
-//       } else {
-//         clearInterval(interval);
-//         isRunning.value = false;
-//         isFinished.value = true;
-//       }
-//     }, 1000);
-//   }
-// }
-// function stopTimer() {
-//   clearInterval(interval);
-//   isRunning.value = false;
-// }
-// function resetTimer() {
-//   hours.value = 0;
-//   minutes.value = 0;
-//   seconds.value = 0;
-//   clearInterval(interval);
-//   isRunning.value = false;
-// }
 </script>
 
 <style scoped>
